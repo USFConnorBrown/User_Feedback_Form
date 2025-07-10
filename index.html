@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="container">
+    <h1>User Feedback Form</h1>
+    <form id="feedbackForm">
+    <label for="username">Name</label>
+    <input type="text" id="username" name="username" data-tooltip="Enter your full name" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" data-tooltip="Enter a valid email address" required>
+    <label for="comments">Comments</label>
+    <textarea id="comments" name="comments" data-tooltip="Share your feedback or suggestions" required></textarea>
+    <small id="char-count">0 characters</small>
+    <button type="submit">Submit</button>
+    </form>
+
+    <div id="feedbackMessage"></div>
+    <h2>Feedback History</h2>
+    </div>
+    </div>
+
+<script src="cp_1.js"></script>
+
+</body>
+</html>
