@@ -1,1 +1,92 @@
-b
+body {
+font-family: Arial, sans-serif;
+background-color: #eaf4fc;
+margin: 0;
+padding: 25px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;  
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0px 10px rgba(0, 64, 128, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #004080;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+margin-top: 16px;
+font-weight: bold;
+color: #003366;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #a3c2f0;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #f5faff;
+}
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+#char-count {
+    font-size: 0.9rem;
+    color: #336699;
+    margin-top: 5px;
+}
+
+#feedbackMessage {
+   margin-top: 30px;
+}
+
+.feedback-entry {
+    background-color: #f0f8ff;
+    padding: 12px;
+    margin-top: 12px;
+    border-left: 4px solid #007acc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #f9f9f9;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: none;
+    z-index: 1000;
+    pointer-events: none;
+    white-space: nowrap;
+}
