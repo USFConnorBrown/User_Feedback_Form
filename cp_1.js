@@ -1,27 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("feedbackForm");
     const feedbackDisplay = document.getElementById("feedbackMessage");
-    const charCount = document.getElementById("charCount");
+    const charCount = document.getElementById("char-count");
     const comments = document.getElementById("comments");
 
     comments.addEventListener("input", function(event) {
-        charCount.textContent = '${comments.value.length} characters';
+        charCount.textContent = comments.value.length + " characters";
     });
 
-    const tooltip = document.getElementById("div");
+    const tooltip = document.createElement("div");
     tooltip.className = "tooltip";
     document.body.appendChild(tooltip);
     document.addEventListener("mouseover", function(event){
         if (event.target.dataset.tooltip) {
-            tooltip.textContent = e.target.dataset.tooltip;
+            tooltip.textContent = event.target.dataset.tooltip;
             tooltip.style.display = "block";
-            const rect = e.target.getBoundingClientRect();
+            const rect = event.target.getBoundingClientRect();
             tooltip.style.left = `${rect.left + window.scrollX}px`;
             tooltip.style.top = `${rect.bottom + window.scrollY - 25}px`;
         }
     });
 
-    document.addEventListener("mouseout", (event) {
+    document.addEventListener("mouseout", function (event) {
         if (event.target.dataset.tooltip) {
             tooltip.style.display = "none";
         }
@@ -50,6 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.addEventListener("click", function(event) {
         if (form.contains(event.target)) return;
-           event.stopPropagation();
+        event.stopPropagation();
         });
     });
